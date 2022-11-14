@@ -1,1 +1,18 @@
 * * ? * MON-SAT *
+
+AutoStopEC2Instance
+ cron(0 21 ? * * *) – Everday at 9:00 PM UTC
+ 
+ cron(0 9 ? * MON-FRI * *) – Everday at 9:00 AM UTC  except Saturday & Sunday
+ 
+ 
+ expression “cron(0 22 * * ? *)”. Since the times are in UTC I put the hour at 22 (10pm at night) which is 18EST (6pm Eastern Standard Time). Remember that I wanted the EC2 to shut off automatically at 6pm as our developers usually leave around 5:30 each day. Half an hour gave enough time for employees to shut down their computer
+ 
+ cron(0 22 * * ? *) shuts the EC2 instance down at 6pm EST every day.
+ 
+ cron(30 12 ? * MON-FRI *)”, This starts the EC2 instances Mon-Fri at 8:30EST / 12:30UTC.
+ 
+ 
+ 0 11 ? * 2-6 *   un on 11 am IST and from monday to friday
+ 
+ 0 20 ? * 2-6 *  should run on 11 am IST and from monday to friday
