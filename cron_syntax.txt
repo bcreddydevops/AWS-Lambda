@@ -1,3 +1,15 @@
+# Run at 10:15 am (UTC) every day
+cron(15 10 * * ? *)
+
+# Run at 6:00 pm (UTC) every Monday through Friday
+cron(0 18 ? * MON-FRI *)
+
+# Run at 8:00 am (UTC) every 1st day of the month
+cron(0 8 1 * ? *)
+
+# Run every 15 minutes Monday to Friday between 10:00 am and 4:45 pm (UTC)
+cron(0/15 10-16 ? * MON-FRI *)
+
 * * ? * MON-SAT *
 
 AutoStopEC2Instance
