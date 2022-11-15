@@ -1,3 +1,33 @@
+https://crontab.guru/
+
+https://time.is/UTC
+https://time.is/GMT
+
+minute   hours    dayofthemonth  monthofyear  dayofweek
+------   -----    -------------  -----------  ----------
+0-59     0-23      1-31           1-12         0-6          sunday=0
+
+*	*	*	*	*  command to be executed .
+1	2	3	4	5
+-	-	-	-	-
+1.mintus (0-59)
+2.hours(0-23)
+3.dayofmonth(1-31)
+4.monthofyear(1-12)
+5.dayofweek (0-6) 0=sunday
+
+Test now 
+1 5 15 11 ? *
+
+# To RUN on Weekends 
+0 0 ? * SAT-SUN *
+
+# Everydat 5am form mon to friday
+0 5 ? * MON-FRI *
+
+#Everyda 7pm from mon to friday 
+0 19 ? * MON-FRI *
+
 # Run at 10:15 am (UTC) every day
 cron(15 10 * * ? *)
 
@@ -19,8 +49,7 @@ AutoStopEC2Instance
  
  
  expression “cron(0 22 * * ? *)”. Since the times are in UTC I put the hour at 22 (10pm at night) which is 18EST (6pm Eastern Standard Time). 
-Remember that I wanted the EC2 to shut off automatically at 6pm as our developers usually leave around 5:30 each day.
-Half an hour gave enough time for employees to shut down their computer
+
  
  cron(0 22 * * ? *) shuts the EC2 instance down at 6pm EST every day.
  
