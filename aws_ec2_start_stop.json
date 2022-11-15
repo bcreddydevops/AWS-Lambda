@@ -20,12 +20,6 @@
                 "logs:PutLogEvents"
             ],
             "Resource": "arn:aws:logs:*:*:*"
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": "sns:Publish",
-            "Resource": "arn:aws:sns:*:604199317070:Demo-EC2-Alerts"
         }
     ]
 }
